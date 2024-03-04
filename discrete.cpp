@@ -24,6 +24,15 @@ int find(int x){
     return r + 1; // 映射到从1开始的数值
 }
 
+vector<int>::iterator unique(vector<int> &a){
+    int j = 0;
+    for (int i = 0; i < a.size(); i++){
+        if(!i || a[i] != a[i - 1])
+            a[j++] = a[i]; 
+    }
+    return a.begin() + j;
+}
+
 int main(){
     cin >> n >> m;
     for (int i = 0; i < n; i++) {
