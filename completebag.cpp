@@ -21,3 +21,28 @@ int main(){
     cout << f[n][m] << endl;
     return 0;
 }
+
+/*
+#include<iostream>
+#include<algorithm>
+using namespace std;
+
+const int N = 1010;
+int f[N];
+int n, m;
+int V[N], W[N];
+
+int main(){
+    cin >> n >> m;
+    
+    for(int i = 1; i <= n; i++) cin >> V[i] >> W[i];
+    
+    for(int i = 1; i <= n; i++)
+        for(int j = V[i]; j <= m; j++) {
+                f[j] = max(f[j], f[j - V[i]] + W[i]);
+            }
+    
+    cout << f[m] << endl;
+    return 0;
+}
+*/
